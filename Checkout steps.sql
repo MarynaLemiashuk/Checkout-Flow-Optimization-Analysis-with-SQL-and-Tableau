@@ -13,8 +13,8 @@ left join
 checkout_actions as a on a.user_id = tc.user_id
 where a.action_name like '%completepayment.click%'
 and 
-a.action_date between '2022-07-01' and '2023-01-31'),
-group by tc.user_id
+a.action_date between '2022-07-01' and '2023-01-31'
+group by tc.user_id),
 total_successful_attempts as
 (select
 a.user_id,
